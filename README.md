@@ -64,11 +64,13 @@ src/
 💡 Coming soon: https://your-live-demo.vercel.app
 
 🙋‍♀️ Author
-with ❤️ hikma jemal
 
- screenshot of the frontpage
+ with ❤️ hikma jemal
 
-Built <img width="2560" height="1600" alt="Screenshot (26)" src="https://github.com/user-attachments/assets/126422e6-fdd6-4ffd-a589-18ec4e949c12" />
 
+Here is a screenshot:
+
+![Home Page Screenshot]
+<img width="2560" height="1600" alt="food" src="https://github.com/user-attachments/assets/1b7041c5-0bd7-42d6-8257-148c930dc04a" />
 
 

@@ -1,69 +1,76 @@
-# React + TypeScript + Vite
+# 🍽️ Foodie Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Foodie Finder** is a beautifully crafted React web application that lets users search for meals from around the world using the [TheMealDB API](https://www.themealdb.com/api.php). It offers a clean, responsive UI powered by Tailwind CSS and shadcn/ui components.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🔍 Search meals by name, ingredient, or category
+- 📖 View full meal details, instructions, and country of origin
+- 🍱 Beautiful responsive meal cards with images
+- 🎲 Random meal generator (coming soon!)
+- 🎨 Styled with Tailwind CSS + ShadCN UI for a sleek, modern look
+- 🌍 Mobile-first design — works on all screen sizes
+- ⚙️ State management using React hooks
+- 💥 Error and loading states handled cleanly
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🖼️ Preview
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+![Foodie Finder UI Screenshot](https://user-images.githubusercontent.com/your-image-link.png)  
+*Mobile-friendly, responsive, and fast.*
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Frontend:** React + Vite + TypeScript
+- **Styling:** Tailwind CSS, ShadCN UI
+- **API:** [TheMealDB](https://www.themealdb.com/api.php)
+- **Routing:** React Router DOM
+- **HTTP Client:** Axios
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 🛠️ Installation
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/your-username/foodie-finder.git
+cd foodie-finder
+
+📁 Folder Structure
+src/
+├── components/      # Header, SearchBar, MealCard
+├── pages/           # Home, MealDetail
+├── services/        # API integration (Axios)
+├── assets/          # Background image, icons
+├── App.tsx
+└── main.tsx
+
+🔧 API Reference
+🔎 Search: https://www.themealdb.com/api/json/v1/1/search.php?s=
+
+🆔 Get Meal: https://www.themealdb.com/api/json/v1/1/lookup.php?i=
+
+🎲 Random Meal: https://www.themealdb.com/api/json/v1/1/random.php
+
+📂 Categories: https://www.themealdb.com/api/json/v1/1/categories.php
+
+🌐 Live Demo
+💡 Coming soon: https://your-live-demo.vercel.app
+
+🙋‍♀️ Author
+
+ with ❤️ hikma jemal
+
+
+Here is a screenshot:
+
+![Home Page Screenshot]
+<img width="2560" height="1600" alt="food" src="https://github.com/user-attachments/assets/1b7041c5-0bd7-42d6-8257-148c930dc04a" />
+
+

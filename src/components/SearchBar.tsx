@@ -1,33 +1,28 @@
-import { useState } from "react";
+import { useState, type JSX } from "react";
 
 type SearchBarProps = {
   onSearch: (query: string) => void;
 };
 
-function SearchBar({ onSearch }: SearchBarProps) {
-  const [term, setTerm] = useState("");
+function SearchBar({ onSearch }: SearchBarProps): JSX.Element {
+  const [inputValue, setInputValue] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (term.trim()) onSearch(term.trim());
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setInputValue(value);
+    onSearch(value);
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex gap-2 mt-4">
+    <div className="w-[80%] max-w-md mx-auto px-4 pt-6">
       <input
         type="text"
-        value={term}
-        onChange={(e) => setTerm(e.target.value)}
-        placeholder="Search meals..."
-        className="border border-gray-300 p-2 rounded w-full"
+        placeholder="Search meals 🍲"
+        value={inputValue}
+        onChange={handleChange}
+        className="w-full px-6 py-3 rounded-full shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#ff7043] focus:ring-offset-2 bg-white/80 backdrop-blur-sm placeholder:text-gray-500"
       />
-      <button
-        type="submit"
-        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-      >
-        Search
-      </button>
-    </form>
+    </div>
   );
 }
 

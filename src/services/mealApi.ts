@@ -17,3 +17,8 @@ export const getRandomMeal = () =>
 // 📂 Get categories (optional feature)
 export const getCategories = () =>
   axios.get(`${BASE_URL}/categories.php`);
+
+export const getMealsByCategory = async (category: string) => {
+  return await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`);
+};
+
